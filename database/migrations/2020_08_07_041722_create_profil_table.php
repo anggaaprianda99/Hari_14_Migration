@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostsHasTagsTable extends Migration
+class CreateProfilTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePostsHasTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts_has_tags', function (Blueprint $table) {
+        Schema::create('profil', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreatePostsHasTagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts_has_tags');
+        Schema::dropIfExists('profil');
     }
 }
