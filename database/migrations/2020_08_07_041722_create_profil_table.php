@@ -14,7 +14,10 @@ class CreateProfilTable extends Migration
     public function up()
     {
         Schema::create('profil', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->longText('nama_lengkap');
+            $table->string('email');
+            $table->string('foto');
             $table->timestamps();
         });
     }

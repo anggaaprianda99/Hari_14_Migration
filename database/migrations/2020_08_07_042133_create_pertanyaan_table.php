@@ -14,7 +14,11 @@ class CreatePertanyaanTable extends Migration
     public function up()
     {
         Schema::create('pertanyaan', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('judul');
+            $table->longText('isi');
+            $table->date('tanggal_dibuat');
+            $table->date('tanggal_diperbaharui');
             $table->timestamps();
         });
     }

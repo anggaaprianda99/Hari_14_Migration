@@ -14,7 +14,9 @@ class CreateKomentarPertanyaanTable extends Migration
     public function up()
     {
         Schema::create('komentar_pertanyaan', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->longText('isi');
+            $table->date('tanggal_dibuat');
             $table->timestamps();
         });
     }
